@@ -16,6 +16,10 @@ def get_sample_counts(output_dir, dataset, class_names):
     total_count - int
     class_positive_counts - dict of int, ex: {"Effusion": 300, "Infiltration": 500 ...}
     """
+    print ( "\n" ) # test
+    print ( os.path ) # 測試目前的目錄在哪裡
+    print ( output_dir ) # 看目前output位址在哪 
+    print ( "\n" ) # test
     df = pd.read_csv(os.path.join(output_dir, f"{dataset}.csv"))
     total_count = df.shape[0]
     labels = df[class_names].as_matrix()
